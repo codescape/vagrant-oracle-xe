@@ -52,7 +52,7 @@ class oracle::server {
 
 class oracle::xe {
   file {
-    "/tmp/oracle-xe-11.2.0-1.0.x86_64.rpm.zip":,
+    "/tmp/oracle-xe-11.2.0-1.0.x86_64.rpm.zip":
       source => "puppet:///modules/oracle/oracle-xe-11.2.0-1.0.x86_64.rpm.zip";
     "/tmp/xe.rsp":
       source => "puppet:///modules/oracle/xe.rsp";
