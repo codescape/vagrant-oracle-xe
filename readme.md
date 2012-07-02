@@ -1,7 +1,7 @@
-Vagrant Oracle XE 11g
-=====================
+Oracle Database XE 11g provisioning with Vagrant
+================================================
 
-Vagrant provisioning project for an Oracle Database XE 11g instance running on Ubuntu 11.10 with code provided by http://www.andrejkoelewijn.com/wp/2012/02/28/oracle-xe-on-ubuntu-using-vagrant-and-puppet/ and a preconfigured Ubuntu 10.11 box taken from https://github.com/dbx/vagrant-oracle-11g-xe/.
+This project aims to ease the provisioning of an Oracle Database XE 11g instance running on Ubuntu 11.10 with 64bit.
 
 Getting started
 ---------------
@@ -10,3 +10,12 @@ Getting started
 * Download and copy [Oracle Database Express Edition 11g Release 2](http://www.oracle.com/technetwork/database/express-edition/downloads/index.html) to `modules/oracle/oracle-xe-11.2.0-1.0.x86_64.rpm.zip`
 * Run `vagrant up` from your checkout directory
 * Connect to your database at `33.33.33.10:1521/xe` with credentials `sys/manager` or `system/manager`
+
+Credits
+-------
+
+Using code provided on Andrej Koelwijn's blog:
+http://www.andrejkoelewijn.com/wp/2012/02/28/oracle-xe-on-ubuntu-using-vagrant-and-puppet/
+
+Using the Ubuntu 10.11 box created and hosted by Tim Huegdon:
+http://timhuegdon.com/vagrant-boxes/ubuntu-11.10.box
