@@ -1,7 +1,8 @@
 Vagrant::Config.run do |config|
 
-  config.vm.define :oraxe do | db1_config|
-    db1_config.vm.box = "vagrant-oneiric-v3"
+  config.vm.define :oraxe do |db1_config|
+    db1_config.vm.box = "lucid64"
+    db1_config.vm.box_url = "http://files.vagrantup.com/lucid64.box"
     db1_config.vm.host_name = "oraxe"
     db1_config.vm.forward_port 22, 41022, :adapter => 1
     db1_config.vm.network :hostonly, "33.33.33.10", :adapter => 2
