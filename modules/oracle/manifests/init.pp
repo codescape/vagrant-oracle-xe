@@ -70,7 +70,7 @@ class oracle::xe {
     "unzip xe":
       alias => "unzip xe",
       command => "/usr/bin/unzip -o /tmp/oracle-xe-11.2.0-1.0.x86_64.rpm.zip",
-      require => File["/tmp/oracle-xe-11.2.0-1.0.x86_64.rpm.zip"],
+      require => [Package["unzip"],File["/tmp/oracle-xe-11.2.0-1.0.x86_64.rpm.zip"]],
       cwd => "/tmp",
       user => root,
       creates => "/tmp/oracle-xe-11.2.0-1.0.x86_64.rpm";
