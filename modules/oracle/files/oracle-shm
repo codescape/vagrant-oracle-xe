@@ -1,6 +1,5 @@
-#! /bin/sh
+#!/bin/sh
 # /etc/init.d/oracle-shm
-#
 #
 case "$1" in
   start)
@@ -30,7 +29,7 @@ esac
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
+# Default-Stop:      0 1 6 
 # Short-Description: Bind /run/shm to /dev/shm at system startup.
 # Description:       Fix to allow Oracle 11g use AMM.
 ### END INIT INFO

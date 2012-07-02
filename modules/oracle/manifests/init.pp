@@ -65,6 +65,11 @@ class oracle::xe {
     "/etc/init.d/oracle-shm":
       mode => 0755,
       source => "puppet:///modules/oracle/oracle-shm";
+    "/bin/awk":
+      ensure => link,
+      target => "/usr/bin/awk";
+    "/var/lock/subsys":
+      ensure => directory;
   }
 
   exec {
