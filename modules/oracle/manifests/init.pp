@@ -38,12 +38,6 @@ class oracle::server {
       ensure => running;
   }
 
-  exec {
-    "/usr/sbin/ntpdate ntp.ubuntu.com":
-      alias => "ntpdate",
-      require => Service["ntp"];
-  }
-
   file {
     "/etc/sysctl.d/60-oracle.conf" :
       source => "puppet:///modules/oracle/xe-sysctl.conf";
