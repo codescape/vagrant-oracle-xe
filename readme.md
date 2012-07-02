@@ -6,9 +6,8 @@ Vagrant provisioning project for an Oracle Database XE 11g instance running on U
 Getting started
 ---------------
 
-* Install VirtualBox from https://www.virtualbox.org
-* Install Vagrant from http://vagrantup.com
-
-* Download Oracle Database Express Edition 11g Release 2 from http://www.oracle.com/technetwork/database/express-edition/downloads/index.html and copy it to `modules/oracle/oracle-xe-11.2.0-1.0.x86_64.rpm.zip`.
-
+* Install "VirtualBox"(https://www.virtualbox.org)
+* Install "Vagrant"(http://vagrantup.com)
+* Download "Oracle Database Express Edition 11g Release 2"(http://www.oracle.com/technetwork/database/express-edition/downloads/index.html) from and copy it to `modules/oracle/oracle-xe-11.2.0-1.0.x86_64.rpm.zip`.
 * Run `vagrant up`
+* Connect to your database at `33.33.33.10:1521/xe` with credentials `sys/manager` or `system/manager`
