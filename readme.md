@@ -1,7 +1,7 @@
 Vagrant Oracle XE 11g
 =====================
 
-Vagrant provisioning project for an Oracle Database XE 11g instance running on Ubuntu 11.10 with code provided by http://www.andrejkoelewijn.com/wp/2012/02/28/oracle-xe-on-ubuntu-using-vagrant-and-puppet/.
+Vagrant provisioning project for an Oracle Database XE 11g instance running on Ubuntu 11.10 with code provided by http://www.andrejkoelewijn.com/wp/2012/02/28/oracle-xe-on-ubuntu-using-vagrant-and-puppet/ and a preconfigured Ubuntu 10.11 box taken from https://github.com/dbx/vagrant-oracle-11g-xe/.
 
 Getting started
 ---------------
