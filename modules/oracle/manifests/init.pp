@@ -24,6 +24,8 @@ class oracle::server {
       ensure => installed;
     "unixodbc":
       ensure => installed;
+    "git":
+      ensure => installed;
   }
 
   service {
@@ -47,6 +49,11 @@ class oracle::server {
     "syslog":
       ensure => present,
       groups => ["syslog","adm"];
+  }
+  
+  group {
+    "puppet":
+      ensure => present;
   }
 }
 
