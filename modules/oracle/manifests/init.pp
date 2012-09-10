@@ -1,8 +1,8 @@
 class oracle::server {
   exec {
     "/usr/bin/apt-get -y update":
-    alias => "aptUpdate",
-    timeout => 3600
+      alias => "aptUpdate",
+      timeout => 3600;
   }
 
   package {
@@ -33,7 +33,6 @@ class oracle::server {
       ensure => stopped;
     "monit":
       ensure => running;
-    /* subscribe => File["/etc/monit/conf.d/monitrc"];*/
     "rsyslog":
       ensure => running;
     "procps":
@@ -41,7 +40,7 @@ class oracle::server {
   }
 
   file {
-    "/etc/sysctl.d/60-oracle.conf" :
+    "/etc/sysctl.d/60-oracle.conf":
       source => "puppet:///modules/oracle/xe-sysctl.conf";
   }
 
