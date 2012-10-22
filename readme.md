@@ -6,6 +6,7 @@ This project aims to ease the provisioning of an Oracle Database XE 11g instance
 Getting started
 ---------------
 
+* Clone this repository and checkout a local copy.
 * Make sure you have both [VirtualBox](https://www.virtualbox.org) and [Vagrant](http://vagrantup.com) installed.
 * Download and copy [Oracle Database Express Edition 11g Release 2](http://www.oracle.com/technetwork/database/express-edition/downloads/index.html) to `modules/oracle/files/oracle-xe-11.2.0-1.0.x86_64.rpm.zip`.
 * Run `vagrant up` from your checkout directory.
