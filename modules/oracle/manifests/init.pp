@@ -42,6 +42,8 @@ class oracle::server {
   file {
     "/etc/sysctl.d/60-oracle.conf":
       source => "puppet:///modules/oracle/xe-sysctl.conf";
+    "/etc/profile.d/oracle.sh":
+      source => "puppet:///modules/oracle/oracle.sh";
   }
 
   user {
