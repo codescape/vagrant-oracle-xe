@@ -1,4 +1,5 @@
 class oracle::server {
+
   exec {
     "/usr/bin/apt-get -y update":
       alias => "aptUpdate",
@@ -83,10 +84,10 @@ class oracle::xe {
       user => root,
       creates => "/tmp/oracle-xe-11.2.0-1.0.x86_64.rpm";
     "alien xe":
-      command => "/usr/bin/alien --to-deb --scripts /tmp/Disk1/oracle-xe-11.2.0-1.0.x86_64.rpm",
-      cwd => "/tmp/Disk1",
+      command => "/usr/bin/alien --to-deb --scripts /tmp/oracle-xe-11.2.0-1.0.x86_64.rpm",
+      cwd => "/tmp",
       require => Exec["unzip xe"],
-      creates => "/tmp/Disk1/oracle-xe_11.2.0-2_amd64.deb",
+      creates => "/tmp/oracle-xe_11.2.0-2_amd64.deb",
       user => root;
     "configure xe":
       command => "/etc/init.d/oracle-xe configure responseFile=/tmp/xe.rsp >> /tmp/xe-install.log",
@@ -108,6 +109,6 @@ class oracle::xe {
       provider => "dpkg",
       ensure => latest,
       require => Exec["alien xe"],
-      source => "/tmp/Disk1/oracle-xe_11.2.0-2_amd64.deb";
+      source => "/tmp/oracle-xe_11.2.0-2_amd64.deb";
   }
 }
